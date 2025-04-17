@@ -1,0 +1,16 @@
+.reviewList {
+  list-style: none;
+  padding: 0;
+  color: black;
+}
+
+.reviewItem {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #232323;
+}
+
+.reviewText {
+  text-align: justify;
+  color: black;
+}

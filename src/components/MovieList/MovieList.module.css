@@ -1,0 +1,36 @@
+.films {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.film-item {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.film-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.film-item h3 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.film-item a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.filmTitle {
+  padding: 0 10px 10px;
+}
