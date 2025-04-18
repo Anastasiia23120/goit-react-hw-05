@@ -13,13 +13,13 @@ const MoviesPage = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (query) {
+    if (queryParam) {
       const fetchMovies = async () => {
         setLoading(true);
         setError("");
         try {
           const response = await axios.get(
-            `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=39366e740292cdc72bf71cb39823a882`
+            `https://api.themoviedb.org/3/search/movie?query=${queryParam}&api_key=39366e740292cdc72bf71cb39823a882`
           );
           setMovies(response.data.results);
         } catch {
@@ -31,7 +31,7 @@ const MoviesPage = () => {
 
       fetchMovies();
     }
-  }, [query]);
+  }, [queryParam]);
 
   const handleSearch = (event) => {
     event.preventDefault();

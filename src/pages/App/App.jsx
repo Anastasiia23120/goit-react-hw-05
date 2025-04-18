@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navigation from "../../components/Navigation/Navigation";
 import "./App.module.css";
 
@@ -16,7 +16,7 @@ const NotFoundPage = lazy(() => import("../NotFoundPage/NotFoundPage"));
 
 function App() {
   return (
-    <Router>
+    <>
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/not-found" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 }
 
